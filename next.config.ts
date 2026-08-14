@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       // Agregar aquí dominios CDN cuando se configuren
     ],
   },
+  output: 'standalone',
   // Headers de seguridad para producción
   async headers() {
     return [

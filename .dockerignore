@@ -1,0 +1,13 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+.npm-portable
+scratch
+AGENTS.md
+CLAUDE.md
+implementation_plan.md
+project.spec.md
