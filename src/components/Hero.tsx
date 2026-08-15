@@ -142,7 +142,7 @@ export default function Hero() {
           style={{
             fontFamily: "var(--font-barlow), 'Barlow', Impact, sans-serif",
             fontWeight: 900,
-            fontSize: "clamp(5.5rem, 16vw, 14rem)",
+            fontSize: "clamp(3rem, 13vw, 14rem)",
             lineHeight: "0.9",
             letterSpacing: "-0.01em",
             textTransform: "uppercase",
