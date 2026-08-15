@@ -166,11 +166,11 @@ export default function EnrollmentModal({ isOpen, plan, onClose }: EnrollmentMod
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-            className="relative w-full max-w-lg overflow-hidden"
-            style={{ backgroundColor: "#111113", border: "1px solid #27272A", borderRadius: "16px" }}
+            className="relative w-full max-w-lg flex flex-col overflow-hidden"
+            style={{ backgroundColor: "#111113", border: "1px solid #27272A", borderRadius: "16px", maxHeight: "90vh" }}
           >
           {/* Barra de progreso superior */}
-          <div className="h-1 w-full" style={{ backgroundColor: "#1C1C1F" }}>
+          <div className="h-1 w-full shrink-0" style={{ backgroundColor: "#1C1C1F" }}>
             <motion.div
               className="h-full"
               style={{ backgroundColor: "#DC2626" }}
@@ -192,7 +192,7 @@ export default function EnrollmentModal({ isOpen, plan, onClose }: EnrollmentMod
             <FiX size={20} />
           </button>
 
-          <div className="p-6">
+          <div className="p-6 overflow-y-auto">
             {!submitted && (
               <div className="text-center mb-2">
                 <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.75rem",
