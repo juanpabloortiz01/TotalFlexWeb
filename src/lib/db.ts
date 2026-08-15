@@ -11,12 +11,10 @@ declare global {
 
 function createPool(): Pool {
   if (!process.env.DATABASE_URL) {
-    throw new Error(
-      "DATABASE_URL no está definida. Agrega la variable en .env.local"
-    );
+    console.warn("⚠️ DATABASE_URL no está definida. Si esto ocurre en build time, es normal.");
   }
   return new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL || "postgres://dummy:dummy@localhost/dummy",
     max: 10,
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 5_000,
